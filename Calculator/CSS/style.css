@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Nunito';
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgb(0, 0, 41);
+}
+
+.calculator {
+    background-color: rgb(255, 145, 0);
+    padding: 3rem;
+    box-shadow: 9px 9px 34px -2px #000;
+    border-radius: 3px;
+    display: grid;
+    place-items: center;
+}
+
+input[type="text"] {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    height: 5.2rem;
+    width: 40rem;
+    padding-left: 1rem;
+    border: none;
+    border-radius: 2px;
+    transition: .2s ease-in-out;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 0, 34, 0.39);
+}
+
+.form {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.help {
+    color: rgb(0, 0, 41);
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
+
+button {
+    padding: 0.6rem 2rem;
+    border: none;
+    border-radius: 3px;
+    background: rgb(0, 0, 41);
+    color: rgb(255, 145, 0);
+    font-size: 2.2rem;
+    margin: 2rem 0;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+.show-result {
+    width: 40rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 2rem;
+    height: 4.5rem;
+    background-color: rgba(0, 0, 0, 0.404);
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+.head {
+    color: rgb(255, 0, 13);
+    font-size: 3rem;
+    font-family: monospace;
+    position: relative;
+}
+
+.head::after {
+    background-color: #fff;
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    content: "";
+    height: 2px;
+    display: block;
+}
+.error{
+    color: rgb(255, 0, 13);
+    margin-top: 10px;
+    font-size: 15px;
+}
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 55%;
+    }
+
+    .calculator {
+        padding: 5rem 2rem;
+    }
+
+    .show-result,
+    input[type="text"] {
+        height: 4.5rem;
+        width: 30rem;
+    }
+
+    .help {
+        font-size: 2.2rem;
+    }
+}
