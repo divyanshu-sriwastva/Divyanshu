@@ -1,8 +1,8 @@
 let input = document.getElementsByTagName("input")[0]
 
-/* ------------------ 
-    Entering values to field
-   ------------------ */
+/*------------------ 
+Entering values to field
+------------------*/
 
 // Getting the values from buttons.
 
@@ -81,7 +81,7 @@ divide.addEventListener("click", () => {
     }
 })
 multiply.addEventListener("click", () => {
-    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("x") || input.value.includes("/") || input.value.includes("%")) == false) {
+    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("x") || input.value.includes("/")) == false) {
         input.value += multiply.value
     }
 })
@@ -95,8 +95,8 @@ dot.addEventListener("click", () => {
 })
 
 /* ------------------ 
-    Clearing values of field
-   ------------------ */
+Clearing values of field
+------------------ */
 
 clearBtn.addEventListener("click", () => {
     input.value = null;
@@ -117,21 +117,23 @@ equalBtn.addEventListener("click", () => {
     sec_exp = sec_exp.join("")
     fir_exp = Number.parseFloat(fir_exp)
     sec_exp = Number.parseFloat(sec_exp)
-    if (exp.includes("+") || exp.includes("-") || exp.includes("*") || exp.includes("/") || exp.includes("x")) {
-        if (exp.includes("+")) {
-            input.value = fir_exp + sec_exp
-        }
-        else if (exp.includes("-")) {
-            input.value = fir_exp - sec_exp
-        }
-        else if (exp.includes("*") || exp.includes("x")) {
-            input.value = fir_exp * sec_exp
-        }
-        else if (exp.includes("/")) {
-            input.value = fir_exp / sec_exp
-        }
+    if (exp.includes("+")) {
+        input.value = fir_exp + sec_exp
     }
-    else {
-        input.value = "Invalid"
+    else if (exp.includes("-")) {
+        input.value = fir_exp - sec_exp
+    }
+    else if ((exp.includes("*") || exp.includes("x")) && exp.includes("%") == false) {
+        input.value = fir_exp * sec_exp
+    }
+    else if (exp.includes("/")) {
+        input.value = fir_exp / sec_exp
+    }
+    else if ((exp.includes("*") || exp.includes("x")) && exp.includes("%")) {
+        input.value = fir_exp + sec_exp
+    }
+    if (input.value == 'undefined' || input.value == 'NaN') {
+        input.value = null;
+        input.placeholder = 'Invalid'
     }
 })
