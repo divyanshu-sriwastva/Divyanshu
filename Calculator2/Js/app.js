@@ -28,6 +28,8 @@ let percent = document.getElementById("percent");
 let clearBtn = document.getElementById("clear");
 let backBtn = document.getElementById("back");
 
+let equalBtn = document.getElementById("equal");
+
 // Entering values through buttons.
 
 one.addEventListener("click", () => {
@@ -64,27 +66,27 @@ zero.addEventListener("click", () => {
 // Adding signs to field.
 
 plus.addEventListener("click", () => {
-    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("*") || input.value.includes("/") || input.value.includes("%")) == false) {
+    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("x") || input.value.includes("/") || input.value.includes("%")) == false) {
         input.value += plus.value
     }
 })
 minus.addEventListener("click", () => {
-    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("*") || input.value.includes("/") || input.value.includes("%")) == false) {
+    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("x") || input.value.includes("/") || input.value.includes("%")) == false) {
         input.value += minus.value
     }
 })
 divide.addEventListener("click", () => {
-    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("*") || input.value.includes("/") || input.value.includes("%")) == false) {
+    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("x") || input.value.includes("/") || input.value.includes("%")) == false) {
         input.value += divide.value
     }
 })
 multiply.addEventListener("click", () => {
-    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("*") || input.value.includes("/") || input.value.includes("%")) == false) {
+    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("x") || input.value.includes("/") || input.value.includes("%")) == false) {
         input.value += multiply.value
     }
 })
 percent.addEventListener("click", () => {
-    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("*") || input.value.includes("/") || input.value.includes("%")) == false) {
+    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("x") || input.value.includes("/") || input.value.includes("%")) == false) {
         input.value += percent.value
     }
 })
@@ -101,4 +103,35 @@ clearBtn.addEventListener("click", () => {
 })
 backBtn.addEventListener("click", () => {
     input.value = input.value.slice(0, -1)
+})
+
+/* ------------------ 
+Calculating the result
+------------------ */
+
+equalBtn.addEventListener("click", () => {
+    let exp = Array.from(input.value)
+    let fir_exp = exp.slice(0, exp.indexOf("+")) || exp.indexOf("+") || exp.indexOf("*") || exp.indexOf("/") || exp.indexOf("x") || exp.indexOf("X")
+    let sec_exp = exp.slice(exp.indexOf("+") + 1 || exp.indexOf("-") + 1 || exp.indexOf("*") + 1 || exp.indexOf("/") + 1 || exp.indexOf("x") + 1 || exp.indexOf("X") + 1,);
+    fir_exp = fir_exp.join("")
+    sec_exp = sec_exp.join("")
+    fir_exp = Number.parseFloat(fir_exp)
+    sec_exp = Number.parseFloat(sec_exp)
+    if (exp.includes("+") || exp.includes("-") || exp.includes("*") || exp.includes("/") || exp.includes("x")) {
+        if (exp.includes("+")) {
+            input.value = fir_exp + sec_exp
+        }
+        else if (exp.includes("-")) {
+            input.value = fir_exp - sec_exp
+        }
+        else if (exp.includes("*") || exp.includes("x")) {
+            input.value = fir_exp * sec_exp
+        }
+        else if (exp.includes("/")) {
+            input.value = fir_exp / sec_exp
+        }
+    }
+    else {
+        input.value = "Invalid"
+    }
 })

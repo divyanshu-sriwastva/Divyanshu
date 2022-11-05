@@ -26,7 +26,7 @@ body {
     place-items: center;
 }
 
-input {
+input[type="text"] {
     font-size: 1.8rem;
     text-transform: capitalize;
     height: 5.2rem;

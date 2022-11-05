@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
 * {
     overflow: hidden;
     margin: 0;
@@ -50,7 +51,7 @@ body {
 }
 
 .font {
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 .yellow-btn {
@@ -77,22 +78,27 @@ body {
 }
 
 .calculator {
-    margin-bottom: 1rem;
-    width: 31rem;
+    width: 33rem;
+    margin-bottom: 2.5rem;
 }
 
 input {
-    width: 86vw;
-    font-family: 'Nunito';
     background-color: transparent;
+    font-family: 'Nunito';
     border: none;
     font-size: 6rem;
+    margin: 0 2rem;
     color: #fff;
     height: 18vh
 }
 
-input::placeholder {
+input:placeholder-shown {
     color: #fff;
+}
+
+input::placeholder {
+    color: rgba(128, 128, 128, 0.541);
+    font-family: 'Manrope';
 }
 
 input:focus {
