@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 * {
     overflow: hidden;
     margin: 0;
@@ -40,32 +40,34 @@ body {
     transition: opacity 0.2s ease-in-out;
 }
 
-.circle-btn:hover{
+.circle-btn:hover {
     cursor: pointer;
     opacity: 0.8;
 }
-.circle-btn:active{
+
+.circle-btn:active {
     opacity: 0.6;
 }
-.font{
-    font-size: 2rem;
+
+.font {
+    font-size: 2.2rem;
 }
 
-.yellow-btn{
+.yellow-btn {
     background-color: #ff9706;
     color: #fff;
 }
 
-.margin-left{
+.margin-left {
     margin-left: 1.5rem;
 }
 
-.lght-clr{
+.lght-clr {
     background-color: #6e6e6e85;
     color: #fff;
 }
 
-.zero{
+.zero {
     display: flex;
     justify-content: start;
     width: 15rem;
@@ -74,25 +76,25 @@ body {
     border-radius: 50px;
 }
 
-.calculator{
-    margin-bottom: 2.5rem;
+.calculator {
+    margin-bottom: 1rem;
+    width: 31rem;
 }
 
-input{
+input {
     width: 86vw;
+    font-family: 'Nunito';
     background-color: transparent;
     border: none;
     font-size: 6rem;
-    padding: 0 2.5rem;
-    margin: 0 2rem;
-    color: red;
+    color: #fff;
     height: 18vh
 }
 
-input::placeholder{
-    color: red;
+input::placeholder {
+    color: #fff;
 }
 
-input:focus{
+input:focus {
     outline: transparent;
 }
