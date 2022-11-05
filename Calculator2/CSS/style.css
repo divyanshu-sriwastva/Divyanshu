@@ -1,8 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 * {
-    overflow: hidden;
     margin: 0;
     padding: 0;
 }
@@ -17,7 +16,6 @@ body {
     display: flex;
     align-items: center;
     height: 100vh;
-    justify-content: end;
     flex-direction: column;
 }
 
@@ -79,7 +77,8 @@ body {
 
 .calculator {
     width: 33rem;
-    margin-bottom: 2.5rem;
+    margin: 2.5rem 0 ;
+    margin-top: 3rem;
 }
 
 input {
@@ -102,104 +101,5 @@ input::placeholder {
 }
 
 input:focus {
-    outline: transparent;
-} */
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
-
-* {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    font-family: 'Manrope';
-    background: #000;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    justify-content: end;
-    flex-direction: column;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.5rem;
-}
-
-.circle-btn {
-    width: 6.5rem;
-    height: 6.5rem;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    border: none;
-    font-weight: 500;
-    background-color: #b3b3b3;
-    font-size: 3rem;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.circle-btn:hover{
-    cursor: pointer;
-    opacity: 0.8;
-}
-.circle-btn:active{
-    opacity: 0.6;
-}
-.font{
-    font-size: 2rem;
-}
-
-.yellow-btn{
-    background-color: #ff9706;
-    color: #fff;
-}
-
-.margin-left{
-    margin-left: 1.5rem;
-}
-
-.lght-clr{
-    background-color: #6e6e6e85;
-    color: #fff;
-}
-
-.zero{
-    display: flex;
-    justify-content: start;
-    width: 15rem;
-    align-items: center;
-    padding-left: 2.5rem;
-    border-radius: 50px;
-}
-
-.calculator{
-    margin-bottom: 2.5rem;
-}
-
-input{
-    width: 86vw;
-    background-color: transparent;
-    border: none;
-    font-size: 6rem;
-    padding: 0 2.5rem;
-    margin: 0 2rem;
-    color: red;
-    height: 18vh
-}
-
-input::placeholder{
-    color: red;
-}
-
-input:focus{
     outline: transparent;
 }
