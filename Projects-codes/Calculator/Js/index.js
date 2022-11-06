@@ -42,6 +42,6 @@ btn.addEventListener("click", () => {
         }
         else {
             resultBox.innerHTML = "Invalid"
-            resultBox.style.color = "rgb(163, 0, 8)";
+            resultBox.style.color = "#fff";
         }
 })

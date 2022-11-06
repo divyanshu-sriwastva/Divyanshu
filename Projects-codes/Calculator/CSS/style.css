@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 
 * {
     margin: 0;
     font-family: 'Nunito';
+    font-weight: 700;
     padding: 0;
 }
 
@@ -17,11 +19,10 @@ body {
     background-color: rgb(0, 0, 41);
 }
 
-.table {
+.calculator {
     background-color: rgb(255, 145, 0);
     padding: 3rem;
     box-shadow: 9px 9px 34px -2px #000;
-    margin: 4rem;
     border-radius: 3px;
     display: grid;
     place-items: center;
@@ -57,10 +58,6 @@ input:focus {
     font-size: 2.5rem;
 }
 
-.no-m{
-    margin-top: 0;
-}
-
 button {
     padding: 0.6rem 2rem;
     border: none;
@@ -81,19 +78,56 @@ button:active {
     opacity: 0.8;
 }
 
+.show-result {
+    width: 40rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+    height: 4.5rem;
+    background-color: rgba(0, 0, 0, 0.404);
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
 .head {
-    color: rgb(255, 0, 13);
+    color: #fff;
     font-size: 3rem;
     font-family: monospace;
     position: relative;
 }
 
 .head::after {
-    background-color: #fff;
+    background-color: #000;
     position: absolute;
     bottom: -5px;
     width: 100%;
     content: "";
     height: 2px;
     display: block;
+}
+.error{
+    color: rgb(255, 0, 13);
+    margin-top: 10px;
+    font-size: 15px;
+}
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 55%;
+    }
+
+    .calculator {
+        padding: 5rem 2rem;
+    }
+
+    .show-result,
+    input[type="text"] {
+        height: 4.5rem;
+        width: 30rem;
+    }
+
+    .help {
+        font-size: 2.2rem;
+    }
 }

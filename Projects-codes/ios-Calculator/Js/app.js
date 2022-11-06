@@ -66,12 +66,12 @@ zero.addEventListener("click", () => {
 // Adding signs to field.
 
 plus.addEventListener("click", () => {
-    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("x") || input.value.includes("/") || input.value.includes("%")) == false) {
+    if ((input.value.includes("x") || input.value.includes("/") || input.value.includes("%")) == false) {
         input.value += plus.value
     }
 })
 minus.addEventListener("click", () => {
-    if ((input.value.includes("+") || input.value.includes("-") || input.value.includes("x") || input.value.includes("/") || input.value.includes("%")) == false) {
+    if ((input.value.includes("x") || input.value.includes("/") || input.value.includes("%")) == false) {
         input.value += minus.value
     }
 })
@@ -100,6 +100,7 @@ Clearing values of field
 
 clearBtn.addEventListener("click", () => {
     input.value = null;
+    input.placeholder("00")
 })
 backBtn.addEventListener("click", () => {
     input.value = input.value.slice(0, -1)
@@ -130,7 +131,7 @@ equalBtn.addEventListener("click", () => {
         input.value = fir_exp / sec_exp
     }
     else if ((exp.includes("*") || exp.includes("x")) && exp.includes("%")) {
-        input.value = fir_exp + sec_exp
+        input.value = fir_exp*(sec_exp/100)
     }
     if (input.value == 'undefined' || input.value == 'NaN') {
         input.value = null;

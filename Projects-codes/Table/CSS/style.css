@@ -17,10 +17,11 @@ body {
     background-color: rgb(0, 0, 41);
 }
 
-.calculator {
+.table {
     background-color: rgb(255, 145, 0);
     padding: 3rem;
     box-shadow: 9px 9px 34px -2px #000;
+    margin: 4rem;
     border-radius: 3px;
     display: grid;
     place-items: center;
@@ -56,6 +57,10 @@ input:focus {
     font-size: 2.5rem;
 }
 
+.no-m{
+    margin-top: 0;
+}
+
 button {
     padding: 0.6rem 2rem;
     border: none;
@@ -76,18 +81,6 @@ button:active {
     opacity: 0.8;
 }
 
-.show-result {
-    width: 40rem;
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-    font-size: 2rem;
-    height: 4.5rem;
-    background-color: rgba(0, 0, 0, 0.404);
-    border: 2px solid black;
-    border-radius: 3px;
-}
-
 .head {
     color: rgb(255, 0, 13);
     font-size: 3rem;
@@ -104,27 +97,16 @@ button:active {
     height: 2px;
     display: block;
 }
-.error{
-    color: rgb(255, 0, 13);
-    margin-top: 10px;
-    font-size: 15px;
-}
-@media only screen and (max-width: 500px) {
-    html {
-        font-size: 55%;
-    }
 
-    .calculator {
-        padding: 5rem 2rem;
+@media  only screen and (max-width: 770px){
+    html{
+        font-size: 49%;
     }
-
-    .show-result,
+    .table {
+        padding: 2rem;
+        margin: 2rem;
+    }
     input[type="text"] {
-        height: 4.5rem;
-        width: 30rem;
-    }
-
-    .help {
-        font-size: 2.2rem;
+        width: 35rem;
     }
 }
