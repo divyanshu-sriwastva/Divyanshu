@@ -20,7 +20,7 @@ btn.addEventListener("click", () => {
                 resultBox.innerHTML = "Sorry, i can't evaluate more than one term."
                 resultBox.style.fontSize = '15px'
                 errorMsg.hidden = false;
-                resultBox.style.color = "#000";
+                resultBox.style.color = "495057";
             }
             else {
                 if (exp.includes("+")) {
@@ -35,13 +35,13 @@ btn.addEventListener("click", () => {
                 else if (exp.includes("/")) {
                     resultBox.innerHTML = `= ${fir_exp / sec_exp}`
                 }
-                resultBox.style.fontSize = '18px'
+                resultBox.style.fontSize = '2rem'
                 errorMsg.hidden = true;
-                resultBox.style.color = "#000";
+                resultBox.style.color = "#1a8fe3";
             }
         }
         else {
             resultBox.innerHTML = "Invalid"
-            resultBox.style.color = "#fff";
+            resultBox.style.color = "#495057";
         }
 })
