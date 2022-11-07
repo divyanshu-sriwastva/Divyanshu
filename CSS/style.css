@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 * {
     margin: 0;
@@ -26,7 +24,7 @@ body {
 }
 
 .myPic {
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 
 .name {
@@ -36,7 +34,7 @@ body {
 }
 
 h1 {
-    margin-top: 2rem;
+    margin-top: 3.5rem;
     display: flex;
     font-size: 3rem;
     color: #e3a31a;
@@ -50,7 +48,8 @@ header {
 
 .about-me {
     text-align: center;
-    margin-top: 3rem;
+    line-height: 1.6;
+    margin-top: 2rem;
     padding: 0 20rem;
     font-weight: 500;
     font-size: 2rem;
@@ -90,20 +89,27 @@ header {
     margin-right: 0.5rem;
 }
 
-@media (max-width: 770px) {
-    html {
-        font-size: 49%;
-    }
-
+@media (max-width: 1000px) {
     .about-me {
         padding: 0;
     }
 
     body {
-        padding: 2rem;
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 770px) {
+    html {
+        font-size: 49%;
     }
 
-    #myPic {
-        width: 15rem;
+    .myPic {
+        margin-top: 3rem;
+    }
+
+    #git-link {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
