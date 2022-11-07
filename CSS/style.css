@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Poppins';
+    font-weight: 700;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #eff7fd;
+}
+
+#myPic {
+    width: 20rem;
+    background: #eeeeee;
+    padding: 1rem;
+    border-radius: 100%;
+    box-shadow: 0 0 35px 10px rgb(26 143 227 / 32%);
+}
+
+.myPic {
+    margin-top: 4rem;
+}
+
+.name {
+    margin: 0 1.5rem;
+    font-size: 4rem;
+    color: #1a8fe3;
+}
+
+h1 {
+    margin-top: 2rem;
+    display: flex;
+    font-size: 3rem;
+    color: #e3a31a;
+    align-items: center;
+}
+
+header {
+    display: grid;
+    place-items: center;
+}
+
+.about-me {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 0 20rem;
+    font-weight: 500;
+    font-size: 2rem;
+    color: rgb(53, 53, 53);
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+#git-link {
+    margin-left: 2.2rem;
+    margin-right: 2.2rem;
+}
+
+.btn {
+    background: #C8E4F8;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    color: #006eff;
+    font-weight: 400;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+    letter-spacing: 0.05rem;
+}
+
+.btn:hover {
+    background: #006eff;
+    color: #fff;
+}
+
+.m-rght {
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 770px) {
+    html {
+        font-size: 49%;
+    }
+
+    .about-me {
+        padding: 0;
+    }
+
+    body {
+        padding: 2rem;
+    }
+
+    #myPic {
+        width: 15rem;
+    }
+}
