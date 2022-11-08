@@ -29,13 +29,7 @@ btn.addEventListener("click", () => {
         nin.innerHTML = `${num} x 9 = ${num * 9}`
         ten.innerHTML = `${num} x 10 = ${num * 10}`
         body.style.height = '100%'
+        body.style.padding = '6rem 2rem'
         btn.style.marginBottom = '3rem'
-        function myFunction(x) {
-            if (x.matches) { 
-              document.body.style.padding = "4rem";
-            }
-          }
-          var x = window.matchMedia("(min-width: 700px)")
-          myFunction(x)
     }
 })
