@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 
 * {
     margin: 0;
@@ -12,29 +13,24 @@ html {
 }
 
 body {
-    background: #eff7fd;
+    background: #eff7fda8;
 }
 
 #myPic {
-    width: 20rem;
+    width: 22rem;
     background: #eeeeee;
     padding: 1rem;
     border-radius: 100%;
     box-shadow: 0 0 35px 10px rgb(26 143 227 / 32%);
 }
 
-.myPic {
-    margin-top: 5rem;
-}
-
 .name {
-    margin: 0 1.5rem;
+    margin: 0 2rem;
     font-size: 4rem;
     color: #1a8fe3;
 }
 
 h1 {
-    margin-top: 3.5rem;
     display: flex;
     font-size: 3rem;
     color: #e3a31a;
@@ -42,24 +38,34 @@ h1 {
 }
 
 header {
-    display: grid;
-    place-items: center;
+    display: flex;
+    margin-top: 7rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-me {
     text-align: center;
     line-height: 1.6;
     margin-top: 2rem;
-    padding: 0 20rem;
     font-weight: 500;
     font-size: 2rem;
     color: rgb(53, 53, 53);
+}
+
+.fl {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10rem;
 }
 
 
 .flex {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #git-link {
@@ -72,9 +78,9 @@ header {
     border-radius: 6px;
     padding: 0.6rem 1.2rem;
     margin-top: 4rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #006eff;
-    font-weight: 400;
+    font-weight: 500;
     text-decoration: none;
     transition: .2s ease-in-out;
     letter-spacing: 0.05rem;
@@ -89,15 +95,148 @@ header {
     margin-right: 0.5rem;
 }
 
-@media (max-width: 1000px) {
+main {
+    display: grid;
+    place-items: center;
+}
+
+.tools-head {
+    margin-top: 8rem;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    color: #181d20;
+    position: relative;
+}
+
+.tools-head::after {
+    background-color: #1a8fe3;
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    content: "";
+    height: 2px;
+    display: block;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #006eff;
+    padding: 1.5rem;
+    background: #006eff20;
+    border-radius: 12px;
+}
+
+
+.box {
+    padding: 1.5rem 2rem;
+    background: rgb(251, 251, 251);
+    border-radius: 12px;
+    width: 34rem;
+    margin-top: 6rem;
+    text-decoration: none;
+    box-shadow: 3px 3px 25px -11px #006eff5e;
+}
+
+.title {
+    font-size: 2rem;
+    margin-left: 2rem;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.tools {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex2 {
+    display: flex;
+    align-items: center;
+}
+
+.about-prog {
+    margin-top: 2rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: rgb(53, 53, 53);
+}
+
+.margin {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.cred {
+    font-weight: 500;
+    font-size: 2rem;
+    word-spacing: 3px;
+    color: rgb(68, 68, 68);
+}
+
+footer {
+    background: #e1f1ff;
+    font-family: 'Nunito';
+    padding: 2.5rem 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cred-link{
+    text-decoration: none;
+    color: #006eff;
+}
+
+.cred-link:hover{
+    text-decoration: 1px underline solid #006eff;
+}
+
+.btn-foot{
+    font-size: 3rem;
+    transition: .2s ease-in-out;
+    color: #181d20;
+}
+.btn-foot:hover{
+    color: #1a8fe3;
+}
+.mar{
+    margin-left: 2rem;
+}
+
+@media (max-width: 944px) {
     .about-me {
         padding: 0;
     }
 
-    body {
-        padding: 3rem;
+    header {
+        padding: 0 3rem;
+        flex-direction: column;
+    }
+
+    .fl {
+        margin-left: 0rem;
+        width: 100%;
+    }
+
+    header {
+        margin-top: 2rem;
+    }
+
+    .box {
+        margin-top: 2rem;
+    }
+
+    .tools {
+        margin-top: 4rem;
+    }
+
+    .tools-head {
+        margin-top: 5.5rem;
     }
 }
+
 
 @media (max-width: 770px) {
     html {
@@ -105,11 +244,27 @@ header {
     }
 
     .myPic {
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
 
     #git-link {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+    }
+
+    .m-h1 {
+        margin-top: 3.5rem;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+    }
+    .cred{
+        margin-bottom: 1.5rem;
     }
 }

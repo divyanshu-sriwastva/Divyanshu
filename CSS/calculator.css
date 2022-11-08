@@ -16,7 +16,7 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
-    background-color: #eff7fd;
+    background-color: #eff7fda8;
 }
 
 .calculator {
