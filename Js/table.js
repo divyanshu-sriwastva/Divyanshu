@@ -35,7 +35,6 @@ btn.addEventListener("click", () => {
               document.body.style.padding = "4rem";
             }
           }
-          
           var x = window.matchMedia("(min-width: 700px)")
           myFunction(x)
     }
