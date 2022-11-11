@@ -11,7 +11,7 @@ btn.addEventListener("click", () => {
         fir_exp = Number.parseFloat(fir_exp)
         sec_exp = Number.parseFloat(sec_exp)
         exp.map((val) => {
-            if (val == "+" || val == "-" || val == "*" || val == "/") {
+            if (val == "*" || val == "/") {
                 expCount++;
             }
         })

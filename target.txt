@@ -1,0 +1,11 @@
+:: Targets which I have to make.
+
+-/ Calculator
+-/ iOS Calculator
+-/ Table finder
+-/ Factorial finder.
+-/Unit converter.
+Currency converter.
+-/Temperature converter.
+Joke display.
+Rock paper sci.

@@ -39,7 +39,8 @@ input[type="text"] {
     transition: .2s ease-in-out;
 }
 
-input:focus {
+input:focus,
+select:focus {
     outline: none;
     box-shadow: 0 0 0 3.5px rgba(0, 123, 255, .25);
 }
@@ -112,6 +113,19 @@ button:active {
     color: rgb(255, 0, 13);
     margin-top: 10px;
     font-size: 15px;
+}
+
+select{
+    margin-top: 3rem;
+    margin-bottom: 0.4rem;
+    font-size: 1.8rem;
+    background: #fff;
+    border: 1.5px solid #1a8fe3;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    transition: box-shadow .3s ease-in-out;
+    color: #495057;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 500px) {
