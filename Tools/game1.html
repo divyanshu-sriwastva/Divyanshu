@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter - Divyanshu</title>
+    <link rel="stylesheet" href="../CSS/game1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1 class="head">Rochambeau</h1>
+        <h2 class="help">Rock , Paper , Scissors</h2>
+        <div class="select">
+            <input type="radio" name="select" id="paper" value="paper">
+            <label for="paper">
+                <i class="fa-solid fa-file"></i>
+            </label>
+            <input type="radio" name="select" id="rock" value="rock">
+            <label for="rock" style="margin: 0 3rem">
+                <i class="fa-solid fa-gem"></i>
+            </label>
+            <input type="radio" name="select" id="scissors" value="scissors">
+            <label for="scissors">
+                <i class="fa-solid fa-scissors"></i>
+            </label>
+        </div>
+        <h2 class="win-loose">Let's Guess!!</h2>
+        <div class="guess">
+            <h2 class="user">Your score: <span class="user-value" id="user_score">00</span></h2>
+            <h2 class="comp">AI score: <span class="comp-value" id="comp_score">00</span></h2>
+        </div>
+        <div class="guess" style="margin-top: 2rem;">
+            <h2 class="comp">AI guess: <span class="comp-value" id="comp_guess">X</span></h2>
+            <h2 class="user">Your guess: <span class="user-value" id="user_guess">X</span></h2>
+        </div>
+    </div>
+    <script src="../Js/game1.js"></script>
+</body>
+</html>

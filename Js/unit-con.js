@@ -30,8 +30,7 @@ const calc3 = (x, unit) => {
 btn.addEventListener("click", () => {
     let sel_unit = document.getElementsByName("units")[0].value
     let val = Number.parseFloat(document.querySelector(".value").value)
-    let arr = Array.from(sel_unit)
-    let unit = (arr.slice(arr.indexOf("to")-2,)).join("")
+    let unit = sel_unit.slice(sel_unit.indexOf("o")+2,)
     if (isNaN(val)) {
         resultBox.innerHTML = `Invalid`
     }

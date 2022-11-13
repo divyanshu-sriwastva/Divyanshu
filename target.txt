@@ -8,4 +8,4 @@
 Currency converter.
 -/Temperature converter.
 Joke display.
-Rock paper sci.
+-/Rock paper sci.
